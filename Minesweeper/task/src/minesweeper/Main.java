@@ -47,7 +47,6 @@ public class Main {
                 if ((x >= 1) && (x <= unmarkedField.length + 1) && (y >= 1) && (y <= unmarkedField[0].length + 1)) {
                     field = setFieldWithMines(field, mines, x, y);
                     field = makeFieldWithHints(field);
-                    //printField(field); //вывод поля с расположением мин
                     isFirstMove = false;
                 }
             }
@@ -75,7 +74,6 @@ public class Main {
                             unmarkedField[y - 1][x - 1] = '*';
                             if (field[y - 1][x - 1] == 'X') {
                                 --counter;
-                                System.out.println("X!!!");
                             } else {
                                 ++counter;
                             }
@@ -141,7 +139,6 @@ public class Main {
                     unmarkedField[y - 1][x - 1] = '*';
                     if (field[y - 1][x - 1] == 'X') {
                         --counter;
-                        //System.out.println("X!!!");
                     } else {
                         ++counter;
                     }
